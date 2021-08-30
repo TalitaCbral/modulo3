@@ -32,11 +32,6 @@ usuario1.save()
 })
 .catch()
 
-
-
-
-
-
 const app = express();
 const port = 3000;
 
@@ -45,5 +40,5 @@ app.get("/", (req, res)=> {
 });
 
 app.listen(port, function() {
-    console.info(`App rodando na porta 300`);
+    console.info(`App rodando na porta 3000`);
   });
