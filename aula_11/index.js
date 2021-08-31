@@ -9,7 +9,7 @@ const usuarioModel = require('./models/usuario')
 
 //url de conexao -> mongodb://servidor:porta/nome do banco
 
-mongoose.connect("mondodb://localhost:27017/usuario", {
+mongoose.connect("mongodb://localhost:27017/usuario", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
