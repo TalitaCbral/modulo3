@@ -9,7 +9,7 @@ const usuarioModel = require('./models/usuario')
 
 //url de conexao -> mongodb://servidor:porta/nome do banco
 
-mongoose.connect("mongodb://localhost:27017/usuario", {
+mongoose.connect("mongodb://localhost:27017/usuarios", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -17,20 +17,42 @@ mongoose.connect("mongodb://localhost:27017/usuario", {
 const Usuario = mongoose.model("Usuario", usuarioModel);
 
 
-const usuario1 = new Usuario({
-    nome: "Ivonaldo",
+const usuario2 = new Usuario({
+    nome: "Ivo",
     sobrenome: "Soares",
     cpf: "00000000000",
-    idade: 2000-10-15,
+    idade: "2000-10-15",
     senha: "blue123"
 })
 
 
-usuario1.save()
+
+Usuario.find({})
+.then((usuarios)=> {
+    console.log(usuarios);
+})
+.catch((err)=> {
+    console.log(err)
+})
+
+// encontra um id e deleta ele
+Usuario.findByIdAndDelete()
+.then((usuarios)=> {
+    console.log(`usuario excluido`);
+})
+.catch((err)=> {
+    console.log(err)
+})
+
+////////////////
+
+usuario2.save()
 .then(()=> {
     console.log('Filme Salvo!');
 })
-.catch()
+.catch((err)=> {
+    console.log(err)
+})
 
 const app = express();
 const port = 3000;
