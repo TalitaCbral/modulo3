@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+ *{
+  padding: 0;
+  margin: 0;
+  font-family: 'Odibee Sans', cursive;
+}
+
+
+main{
+  background-color: rgb(197, 206, 238);
+}
+
+nav{
+  background-color: aqua;
+  padding: 1rem;
+  
+}
+
+li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  border-radius: 12px; 
+}
+
+h1{
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px red;
+}
+
+.cadastro{
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  margin: 2rem;
+}
+
+.formulario{
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  margin: 1rem;
+  padding: 1rem 35vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.botao{
+  font-family: 'Odibee Sans', cursive;
+  font-size: 30px;
+  padding: 0.4rem;
+  border-radius: 10px;
+  margin: 1rem;
+  background-color: blue;
+  color: #fff;
+  box-sizing: content-box;
+  box-shadow: 0 0 0.5em rgb(15, 199, 255);
+  border: none;
+}
+
+h3{
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  font-weight: 500;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.headerLista{
+  text-align: center;
+  font-family: 'Odibee Sans', cursive;
+  margin: 1rem;
+}
+
+.imagens{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.imagens img{
+  max-width:500px;
+  max-height:250px;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  
+}
+.imagens iframe{
+  border: 2px solid;
+  border-radius: 12px;
+}
+
+.botaoDel{
+  font-family: 'Odibee Sans', cursive;
+  font-size: 30px;
+  padding: 0.4rem;
+  border-radius: 10px;
+  margin: 1rem 40vw;
+  background-color: blue;
+  color: #fff;
+  box-shadow: 0 0 1em rgb(15, 199, 255);
+  border:none;
+}
+
+.formulario input.inputNome{
+  align-self:center;
+  left:95px;
+  top:23px;
+  width:225px;
+  height: 30px;
+  border-radius: 12px;
+}
+
+.formulario input.inputUrl{
+  align-self:center;
+  left:95px;
+  margin-top:2px;
+  width:225px;
+  height: 30px;
+  border-radius: 12px;
+}
+
+.formulario input.inputVideo{
+  align-self:center;
+  left:95px;
+  margin-top:2px;
+  width:225px;
+  height: 30px;
+  border-radius: 12px;
+}
