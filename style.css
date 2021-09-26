@@ -95,7 +95,7 @@ input{
 }
 
 .section-card{
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -118,6 +118,7 @@ input{
 
 .card-film img{
     width: 100%;
+    height:auto;
     margin: 0.2rem;
     border-radius: 5px;
 }

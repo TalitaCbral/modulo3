@@ -14,4 +14,11 @@ let moviesJson = [
     genre: 'Sci-fi', 
     rate: 8.5
     },
+    {
+        id: Date.now()+2, 
+        name: 'Hauru no Ugoku Shiro',
+        img: './img/Hauru no Ugoku Shiro.jpg', 
+        genre: 'Animação', 
+        rate: 9.6
+        },
 ];
