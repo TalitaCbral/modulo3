@@ -11,7 +11,7 @@ moviesJson.map((item, index)=>{
     
 
 
-    let a = document.querySelector('.section-card').append(cardFilm);
-    console.log('.section-card')
+    document.querySelector('.section-card').append(cardFilm);
+    
     
 });
