@@ -75,7 +75,7 @@ body{
     font-weight: 700;
 }
 
-.film-input{
+input{
     margin: 1rem;
     border-radius: 5px;
     padding: 0.6rem;
@@ -128,7 +128,7 @@ span{
     color: yellow;
 }
 
-.nota{
+.rate{
     font-size: 50px;
     
 }

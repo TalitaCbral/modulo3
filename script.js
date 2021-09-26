@@ -1,18 +1,10 @@
-//cria uma lista vazia que receberá os filmes
+moviesJson.map((item, index)=>{
+    let cardFilm = document.querySelector('.card-film').cloneNode(true);
 
-const movies = []
+    cardFilm.querySelector('.movieName').innerHTML = item.name;
+    cardFilm.querySelector('.igmUrl').innerHTML = item.img;
+    cardFilm.querySelector('.movieGenre').innerHTML = item.genre;
+    cardFilm.querySelector('.rate').innerHTML = item.rate;
 
-//cria uma constante para adicionar os filmes com as respectivas informações
-
-const addMovie = (text)=> {
-    const movie = {
-        name: text,
-        imgUrl: text,
-        genre: text,
-        rate: text,
-        id: Date.now()
-    }
-    movies.push(movie); //Essa parte serve para acrescentar o objeto de filmes recem criado pelo usuário na lista de filmes
-    renderMovies(movie); //Aqui é executada uma função que renderiza o filme adicionado na tela (será criada nas linhas abaixo)
-};
-
+    document.querySelector('.section-card').append(cardFilm);
+});
