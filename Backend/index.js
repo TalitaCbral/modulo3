@@ -7,39 +7,32 @@ const app = express();
 // declaracao da porta
 const port = 3000;
 
-const filmes = ['Vingadores', 'Harry Potter', 'Hulk'];
 
-const tarefas = [
+
+const filmes = [
 {
     id: 968468746854,
-    text: 'ir ao mercado',
+    text: 'Interstellar',
     check: false,
 },
 {
     id: 16868468768,
-    text: 'escovar dente',
+    text: 'Arrive',
     check: false,
 },
 {
     id: 1687168795798,
-    text: 'cortar cabelo',
-    check: false,
-},
-{
-    id: 16846987987,
-    text: 'estudar js',
+    text: 'O Castelo Animado',
     check: false,
 },
 ]
 
-// estou iniciando o express e minha rota GET
+
 // [GET] = HOME
 app.get('/', (req, res)=> {
-    res.send('Hello Bluemers');
+    res.send('Meus Filmes Favoritos');
 })
 
-// rota que retorna a minha lista de filmes
-// [GET] /filmes - Retorna a lista de filmes
 app.get('/filmes', (req, res) => {
     res.send(filmes);
 })
@@ -47,8 +40,6 @@ app.get('/filmes', (req, res) => {
 // rota que retorna um unico filme de acordo com o numero que ele receber
 // [GET] /filmes/{id} - Retorna apenas um unico filme por ID
 app.get('/filmes/:id', (req, res) => {
-// request = a requisicao que vem do cliente para o servidor
-// response = a resposta que o servidor envia para o cliente
     const id = req.params.id - 1;
     const filme = filmes[id];
 
@@ -57,21 +48,17 @@ app.get('/filmes/:id', (req, res) => {
 
 
 
-// [GET] /tarefas - retorna a lista de tarefas
-app.get('/tarefas', (req, res) => {
-    res.send(tarefas);
-})
 
-// [GET] /tarefas/{id} - retorna as tarefas por id
-app.get('/tarefas/:id', (req, res) => {
-// estou pegnado o id pelo parametro que vem da requisicao 
+// [GET] /filmes/{id} - retorna os filmes por id
+app.get('/filmes/:id', (req, res) => {
+// pega o id pelo parametro que vem da requisicao 
     const idParam = req.params.id;
-    // estou procurando na minha lista a tarefa que contem o id igual ao id que estou recebendo no parametro
-    const tarefa = tarefas.find((tarefa) => {
-        return tarefa.id == idParam;
+    // procura na minha lista o filme que contem o id igual ao id que estou recebendo no parametro
+    const filme = filmes.find((filme) => {
+        return filme.id == idParam;
     })
 
-    res.send(tarefa);
+    res.send(filme);
 })
 
 
