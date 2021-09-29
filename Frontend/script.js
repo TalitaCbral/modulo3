@@ -8,10 +8,19 @@ moviesJson.map((item, index)=>{
 
     document.querySelector('.section-card').style.display = 'flex'; //altera o display none para flex para mostrar o card
 
-    
 
 
     document.querySelector('.section-card').append(cardFilm);
     
     
 });
+
+
+
+// const form = document.querySelector('.form')
+// form.addEventListener('submit', (e)=>{
+//     e.preventDefault();
+//     const formNome = document.getElementById('movieName').value
+//     const formUrl = document.getElementById('movieUrl').value
+    
+// })
