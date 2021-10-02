@@ -1,4 +1,6 @@
 const express = require('express');
+const { route } = require('express/lib/application');
+const res = require('express/lib/response');
 const router = express.Router();
 
 //---------------------------------------------------------
@@ -54,7 +56,28 @@ router.put('/:id', (req, res)=>{
 
 //--------------------------------------------------------------
 
+//----Rota de POST para adicionar um novo filme-----------------
+router.post('/add', (req, res)=>{
+    const filme = req.body;
+    filme.id = Date.now();
+    filmes.push(filme);
+    res.status(201).send({
+        message: 'Filme cadastrado com sucesso',
+        data: filme
+    });
+})
 
+//--------------------------------------------------------------
+
+//----Rota DELETE que apaga o filme pelo ID---------------------
+router.delete('/:id', (req, res)=>{
+    const id = req.params.id;
+    const index = filmes.findIndex((filme)=> filme.id == id);
+    filmes.splice(index, 1);
+
+    res.send({
+        message: `Filme excluido com sucesso!`})
+})
 
 
 //-------------Exportação do routes-----------------------------
