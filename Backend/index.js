@@ -12,7 +12,7 @@ app.use('/filmes', FilmesRoutes);
 
 
 app.get('/', (req, res)=>{
-    console.info('Seja bem vind@ à minha lista de FIlmes Favoritos!');
+    console.info('Seja bem vind@ à minha lista de Filmes Favoritos!');
 })
 
 
