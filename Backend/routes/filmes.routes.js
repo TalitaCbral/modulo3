@@ -49,7 +49,7 @@ router.put('/:id', (req, res)=>{
     // filmePreCadastrado.status = filmeEdit.status;
 
     res.send({
-        message: `filme ${filmePreCadastrado.name} cadastrado com sucesso`,
+        message: `filme ${filmePreCadastrado.name} atualizado com sucesso`,
         data: filmePreCadastrado
     });
 });

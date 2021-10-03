@@ -12,13 +12,13 @@ const getFilmes = async () => {
     console.log(data);
     
     data.map((filme)=>{
-        lista.insertAdjacentHTML('beforeend', `
+        lista.insertAdjacentHTML('beforeEnd', `
             <h2 >Filme: <span class="movieName">${filme.name}</span></h2>
             <img class="igmUrl"src="${filme.image}" alt="Imagem do Filme">
             <p>Gênero: <span class="movieGenre">${filme.genre}</span></p>
             <p>Nota: <span class="rate">${filme.rate}</span></p>
-            <button type="button" class="button" onclick="putVaga(${filme.id})">Editar</button>
-            <button type="button" class="button" onclick="deleteVaga(${filme.id})">Excluir</button>
+            <button type="button" class="button" onclick="putFilme(${filme.id})">Editar</button>
+            <button type="button" class="button" onclick="deleteFilme(${filme.id})">Excluir</button>
         `)
     })
 
@@ -55,6 +55,7 @@ const submitForm = async (evento) => {
         const result = await response.json();
 
         if(result) {
+            edicao = false;
             getFilmes();
         }
 
@@ -71,6 +72,7 @@ const submitForm = async (evento) => {
         const result = await response.json();
 
         if(result){
+            edicao = false;
             getFilmes();
         }
     }
@@ -109,6 +111,7 @@ const putFilme = async (id) => {
     genreElement.value = filme.genre;
     rateElement.value = filme.rate;
 
+    edicao = false;
 
 }
 
