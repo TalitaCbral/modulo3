@@ -8,7 +8,6 @@ const getFilmes = async () => {
     const response = await fetch(caminhoApi);
 
     const data = await response.json();
-
     console.log(data);
     
     data.map((filme)=>{
@@ -22,13 +21,15 @@ const getFilmes = async () => {
         `)
     })
 
-};
+}
 getFilmes();
+
+
 
 const submitForm = async (evento) => {
     evento.preventDefault();
 
-    let name = document.getElementById('nome');
+    let name = document.getElementById('name');
     let image = document.getElementById('image');
     let genre = document.getElementById('genre');
     let rate = document.getElementById('rate');
