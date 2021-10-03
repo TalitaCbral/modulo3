@@ -9,10 +9,10 @@ const filmes = [
     {
         id: Date.now(),
         name: "Interstellar",
-        image: "",
+        image: "https://images.theconversation.com/files/64127/original/2mdvqkw8-1415620078.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop",
         genre: "Scy-fi",
         rate: 10,
-        status: false
+        // status: false
 
     }
 ];
@@ -46,7 +46,7 @@ router.put('/:id', (req, res)=>{
     filmePreCadastrado.image = filmeEdit.image;
     filmePreCadastrado.genre = filmeEdit.genre;
     filmePreCadastrado.rate = filmeEdit.rate;
-    filmePreCadastrado.status = filmeEdit.status;
+    // filmePreCadastrado.status = filmeEdit.status;
 
     res.send({
         message: `filme ${filmePreCadastrado.name} cadastrado com sucesso`,

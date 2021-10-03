@@ -8,20 +8,26 @@
     <title>Filmes | Favoritos</title>
 </head>
 <body>
-    <main class="main">
+    <header>
         <nav class="nav-bar">
             <h1 class="app-tittle">Meus Filmes Favoritos</h1>
         </nav>
-        <section class="container">
+    </header>
+
+    <main>
+        <section class="container" onsubmit="submitForm(event)" id="form">
             <form class="films-form">
                 <label class="label"for="name">Nome</label>
-                <input type="text" class="inputName" placeholder="Informe o nome do filme" autofocus>
-                <label class="label" for="name">Imagem</label>
-                <input type="text" class="inputUrl" placeholder="URL da Imagem" autofocus>
-                <label class="label" for="name">Gênero</label>
-                <input type="text" class="inputGenre" placeholder="Informe o Gênero" autofocus>
-                <label class="label" for="name">Nota</label>
-                <input type="text" class="inputRate" placeholder="Informe a Nota" autofocus>
+                <input type="text" required id="nome" class="inputName" placeholder="Informe o nome do filme" autofocus>
+
+                <label class="label" for="image">Imagem</label>
+                <input type="text" required id="image" class="inputUrl" placeholder="URL da Imagem" autofocus>
+
+                <label class="label" for="genre">Gênero</label>
+                <input type="text" required id="genre" class="inputGenre" placeholder="Informe o Gênero" autofocus>
+
+                <label class="label" for="rate">Nota</label>
+                <input type="text" required id="rate" class="inputRate" placeholder="Informe a Nota" autofocus>
 
                 <button class="button"type="submit">Enviar</button>
             </form>
@@ -29,15 +35,12 @@
 
         <section class="section-card">
             <div class="card-film">
-                <h2 >Filme: <span class="movieName"></span></h2>
-                <img class="igmUrl"src="" alt="Imagem do Filme">
-                <p>Gênero: <span class="movieGenre"></span></p>
-                <p>Nota: <span class="rate"></span></p>
+                
             </div>
         </section>
 
     </main>
 
-    <script type="text/javascript"  src="./script.js"></script>
+    <script type="text/javascript"  src="./index.js"></script>
 </body>
 </html>
