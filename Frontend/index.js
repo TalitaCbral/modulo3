@@ -3,7 +3,8 @@ const lista = document.getElementById('lista');
 let edicao = false;
 let idEdicao = 0;
 
-//----Requisição GET para receber os filmes cadastrados--------
+//----RENDERIZAR OS FILMES CADASTRADOS--------
+
 const getFilmes = async () => {
     const response = await fetch(caminhoApi);
 
@@ -24,7 +25,7 @@ const getFilmes = async () => {
 }
 getFilmes();
 
-
+//------------ADICIONAR---------------
 
 const submitForm = async (evento) => {
     evento.preventDefault();
@@ -85,6 +86,8 @@ const submitForm = async (evento) => {
 }
 
 
+//----------ATUALIZAR----------------
+
 const getFilmeById = async (id) => {
     const response = await fetch(`${caminhoApi}/${id}`);
     return filme = response.json();
@@ -108,6 +111,8 @@ const putFilme = async (id) => {
 
 
 }
+
+//-----DELETAR---------------------------------------
 
 const deleteFilme = async (id) => {
     const request = new Request(`${caminhoApi}/${id}`, {
