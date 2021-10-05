@@ -12,13 +12,18 @@ const getFilmes = async () => {
     console.log(data);
     
     data.map((filme)=>{
-        lista.insertAdjacentHTML('beforeEnd', `
-            <h2 >Filme: <span class="movieName">${filme.name}</span></h2>
-            <img class="igmUrl"src="${filme.image}" alt="Imagem do Filme">
-            <p>Gênero: <span class="movieGenre">${filme.genre}</span></p>
-            <p>Nota: <span class="rate">${filme.rate}</span></p>
-            <button type="button" class="button" onclick="putFilme(${filme.id})">Editar</button>
-            <button type="button" class="button" onclick="deleteFilme(${filme.id})">Excluir</button>
+        lista.insertAdjacentHTML('beforeend', `
+            <div class="divCards">
+            
+                <h2 >Filme: <span class="movieName">${filme.name}</span></h2>
+                <img class="igmUrl"src="${filme.image}" alt="Imagem do Filme">
+                <p>Gênero: <span class="movieGenre">${filme.genre}</span></p>
+                <p>Nota: <span class="rate">${filme.rate}</span></p>
+                <button type="button" class="button" onclick="putFilme(${filme.id})">Editar</button>
+                <button type="button" class="button" onclick="deleteFilme(${filme.id})">Excluir</button>
+                </br>
+
+            </div>
         `)
     })
 

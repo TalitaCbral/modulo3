@@ -100,6 +100,18 @@ input{
     padding: 2rem;
 }
 
+.divCards{
+    margin: 3rem;
+    border: 2px black solid;
+    
+}
+.divCards img{
+    width: 100%;
+    height:auto;
+    margin: 0.2rem;
+    border-radius: 5px;
+}
+
 #lista{
     border: 2px solid black;
     border-radius: 12px;
@@ -107,12 +119,12 @@ input{
     padding: 1rem;
     background-color: rgba(17, 46, 128, 0.692);
     display: flex;
-    justify-content: space-between;
+    justify-items: center;
     flex-wrap: wrap;
     width: 25%;
     font-family: 'Odibee Sans';
     font-size: 25px;
-    align-items: center;
+    
 
 }
 
